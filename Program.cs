@@ -10,6 +10,9 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            int answer = Problem1.Run();
+            Console.WriteLine("Problem 1: " + answer);
+            Console.ReadKey();
         }
     }
 }
