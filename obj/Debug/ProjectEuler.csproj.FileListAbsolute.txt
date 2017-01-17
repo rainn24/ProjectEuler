@@ -1,1 +1,7 @@
 C:\Users\Broski\Source\Repos\ProjectEuler\bin\Debug\ProjectEuler.exe.config
+C:\ProjectEuler\bin\Debug\ProjectEuler.exe.config
+C:\ProjectEuler\obj\Debug\ProjectEuler.csprojResolveAssemblyReference.cache
+C:\ProjectEuler\bin\Debug\ProjectEuler.exe
+C:\ProjectEuler\bin\Debug\ProjectEuler.pdb
+C:\ProjectEuler\obj\Debug\ProjectEuler.exe
+C:\ProjectEuler\obj\Debug\ProjectEuler.pdb

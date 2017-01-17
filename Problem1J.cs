@@ -2,9 +2,9 @@
 
 public class Problem1J
 {
-	public Class1()
+	public void Class1()
 	{
-        int[] Numsel = new int[5]
+        int[] Numsel = new int[5];
 
 	}
 }
