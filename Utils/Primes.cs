@@ -8,7 +8,7 @@ namespace ProjectEuler
 {
     static partial class Utils
     {
-        static List<int> Primes(long Val)
+        public static List<int> Primes(long Val)
         {
             //Set # of primes to find with Val;
 
