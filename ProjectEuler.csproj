@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Problem1.cs" />
     <Compile Include="Problem1J.cs" />
+    <Compile Include="Problem2J.cs" />
+    <Compile Include="Problem3J.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
