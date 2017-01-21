@@ -11,7 +11,7 @@ namespace ProjectEuler
         static List<int> Primes(long Val)
         {
             //Set # of primes to find with Val;
-            int Val = 10000;
+
             List<int> primeindex = new List<int>();
             List<int> rawintegers = new List<int>();
             // Add first two primes to prime index.
