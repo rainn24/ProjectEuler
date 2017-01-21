@@ -19,17 +19,28 @@ namespace ProjectEuler
             int print = 0;
             int i = 0;
             int indexval = 0;
-            int[,] factindex = new int[10000,2];
+            int Val = 10000;
+            int[,] factindex = new int[Val,2];
 
-
-            for (i=0; i<10000; i++)
+            // make array of all base integers to some value Val
+            for (i=0; i<val; i++)
             {
                 factindex[i,0] = i;
+
+               // { {1,0 },{2,0 },{3,0 },{4,0 } ..{ 10000,0} }
+               
             }
-            
-            for (i=2; i<10000; i++)
+
+            // set first known primes 1, and 2, 3.
+            factindex[1, 1] = 1;
+            factindex[2, 1] = 1;
+            factindex[3, 1] = 1;
+
+
+
+            for (i=1; i<10000; i++)
             {
-                if (factindex[i,0])
+                if (factindex[2*i,0])
                 {
                  
                 }
