@@ -10,26 +10,18 @@ namespace ProjectEuler
     {
         static List<int> Primes(long Val)
         {
+            //Set # of primes to find with Val;
+            int Val = 10000;
             List<int> primeindex = new List<int>();
             List<int> rawintegers = new List<int>();
-
-            long limit = (long)Math.Ceiling(Math.Sqrt(Val));
-            // Make all integers.
-            // { {1,0 },{2,0 },{3,0 },{4,0 } ..{ 10000,0} }
-            // make array of all base integers to some value Val
-            // List would have to define prime prior to adding it to the list. 
-
+            // Add first two primes to prime index.
             primeindex.Add(2);
             primeindex.Add(3);
 
-            for (int i = 1; i < Val; i++)
-            {
-                rawintegers.Add(i);
-            }
 
-            // Define primes.
-            // { { 1,0 },{ 2,1 },{ 3,1 },{ 4,0 } ..{ 10000,0} }
-            // Option 1: Check to see if known as prime<existing>. If not known check mod against known. If not found, assume prime, enter into storage.
+
+            // Define primes through while loop using q as increment and primeindex as master index list.
+
             int q = 1;
             while (primeindex.Count() < Val)
             {
