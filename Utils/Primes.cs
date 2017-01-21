@@ -8,16 +8,19 @@ namespace ProjectEuler
 {
     static partial class Utils
     {
+        static List<int> primeindex = new List<int>();
+        
         public static List<int> Primes(long Val)
         {
             //Set # of primes to find with Val;
 
-            List<int> primeindex = new List<int>();
             List<int> rawintegers = new List<int>();
             // Add first two primes to prime index.
-            primeindex.Add(2);
-            primeindex.Add(3);
-
+            if (primeindex.Count < 2)
+            {
+                primeindex.Add(2);
+                primeindex.Add(3);
+            }
 
 
             // Define primes through while loop using q as increment and primeindex as master index list.
