@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 
 
@@ -20,8 +21,8 @@ namespace ProjectEuler
             int print = 0;
             int incr = 0;
 
-            ArrayList allFib = new ArrayList();
-            ArrayList allEven = new ArrayList();
+            List <int> allFib = new List <int> ();
+            List <int> allEven = new List <int> ();
     
             for (i = 1; i < p; i = incr)
             {
@@ -41,7 +42,7 @@ namespace ProjectEuler
                     //i = i + previous;
                 }
             }
-            foreach (int element in allEven)
+            foreach (var element in allEven)
             {
                 print = print + element;
             }
