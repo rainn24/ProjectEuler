@@ -17,12 +17,29 @@ namespace ProjectEuler
         {
             long source = 600851475143;
             int print = 0;
-            Utils.Primes(10000);
-            
+            var primeset = Utils.Primes(100000);
+            List<int> foundprimes = new List<int>();
 
+            foreach (var element in primeset)
+            {
+                if(source%element==0)
+                {
+                    if (element > source)
+                    {
+                        print = element;
+                    }
+               else
+                    {
+                        foundprimes.Add(element);
+                        Console.WriteLine("Prime: " + element);
+                        source = source / element;
+                    }
+                }
+                
 
+            }
 
-            return print;
+            return foundprimes.Last();
         }
     }
 }
