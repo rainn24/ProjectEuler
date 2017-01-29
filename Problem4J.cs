@@ -24,9 +24,12 @@ namespace ProjectEuler
             // Tracker for loop.
             int stat = 0;
 
+
+            /*    VERSION 1
             while (passed)
                 {
                 // Find the value.
+                
                 
                 int first = orderset - stat;
                 int second = orderset - stat;
@@ -57,11 +60,56 @@ namespace ProjectEuler
 
                         }
                     }
+                
                 // return true false.
 
                 stat++;
 
             }
+            */
+            // VERSION 2
+            int listlen = 0;
+            int second = 0;
+            List<int> Palin = new List<int>();
+            while (passed)
+            {
+                for(stat=1; stat<orderset-1; stat++ )
+                {
+                    int first = orderset - stat;
+                    Console.WriteLine("Current first number: " + first);
+                    for (int sec = 1; sec<orderset; sec++)
+                    {
+                        second = orderset - sec;
+                        Tvalue = first * second;
+                        string Tchar = Tvalue.ToString();
+                        listlen = Tchar.Count();
+                        List<char> Tlist = Tchar.ToCharArray().ToList();
+                        if (listlen > 5)
+                        {
+                            if (Tlist[0] == Tlist.Last())
+                            {
+                                if (Tlist[1] == (Tlist[listlen - 2]))
+                                {
+                                    if (Tlist[2] == (Tlist[listlen - 3]))
+                                    {
+                                        Palin.Add(Tvalue);
+                                    }
+
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sec = orderset - 1;
+                        }
+                        
+                    }
+                        }
+                testval = Convert.ToString(Palin.Max());
+                passed = false; 
+            }
+                
+           
             answerval = Int32.Parse(testval);
             return answerval;
     }
