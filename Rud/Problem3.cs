@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace ProjectEuler
+namespace ProjectEuler.Rud
 {
     static class Problem3
     {
@@ -18,7 +14,7 @@ namespace ProjectEuler
             //60085147514312 isn't
             long x = 60085147514312;
 
-            var factors = Utils.factor(x);
+            var factors = Utils.factors(x);
 
             return factors.Last();   
         }
