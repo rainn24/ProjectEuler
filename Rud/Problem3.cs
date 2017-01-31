@@ -2,13 +2,17 @@
 
 namespace ProjectEuler.Rud
 {
-    static class Problem3
+    class Problem3 : Problem
     {
+        public Problem3()
+        {
+description = 
+@"//The prime factors of 13195 are 5, 7, 13 and 29.
+//What is the largest prime factor of the number 600851475143 ?";
+        }
 
-        //The prime factors of 13195 are 5, 7, 13 and 29.
-        //What is the largest prime factor of the number 600851475143 ?
 
-        static public int Run()
+        protected override void Solve()
         {
             //60085147514311 prime
             //60085147514312 isn't
@@ -16,7 +20,7 @@ namespace ProjectEuler.Rud
 
             var factors = Utils.factors(x);
 
-            return factors.Last();   
+            answer = factors.Last().ToString();   
         }
     }
 }

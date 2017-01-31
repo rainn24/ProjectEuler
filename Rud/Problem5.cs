@@ -3,19 +3,18 @@ using System.Linq;
 
 namespace ProjectEuler.Rud
 {
-    static class Problem5
+    class Problem5 : Problem
     {
-
-        //2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-
-        //What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
-
-        static public int Run()
+        public Problem5()
         {
+            description =
+@"2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?";
+        }
 
-            int answer = 1;
+        protected override void Solve()
+        {
             List<int> factorList = new List<int>();
-
             for (int i = 2; i <= 20; i++)
             {
                 if (i == 8)
@@ -40,12 +39,14 @@ namespace ProjectEuler.Rud
                 }
             }
 
+            int product = 1;
 
             foreach (int factor in factorList)
             {
-                answer *= factor;
+                product *= factor;
             }
-            return answer;
+            
+            answer = product.ToString();
 
         }
     }

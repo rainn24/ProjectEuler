@@ -1,14 +1,16 @@
 ﻿namespace ProjectEuler.Rud
 {
-    static class Problem1
+    class Problem1 : Problem
     {
-
-        //If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-        //Find the sum of all the multiples of 3 or 5 below 1000.
-        public static int Run()
+        public Problem1()
         {
-            int answer = 0;
+            description = 
+@"If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.";
+        }
 
+        protected override void Solve()
+        {
             int sum = 0;
 
             for (int i = 0; i < 1000; i++)
@@ -18,8 +20,7 @@
                     sum += i;
                 }
             }
-            answer = sum;
-            return answer;
+            answer = sum.ToString();
         }
     }
 }
