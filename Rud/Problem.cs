@@ -36,22 +36,23 @@ namespace ProjectEuler.Rud
 
             WriteDescription();
 
+            watch.Start();
             for (int i = 0; i < count; i++)
             {
-                watch.Restart();
-                Solve();
-                watch.Stop();                
-                ticks += watch.ElapsedTicks;
-                milliseconds += watch.ElapsedMilliseconds;
+                Solve();             
+                
                 Console.Write(".");
             }
+            watch.Stop();   
+
+
             Console.WriteLine();
             
             WriteResults();
 
             Console.WriteLine();
-            Console.WriteLine("Average Duration of {0} runs (ticks): {1}", count, (double) ticks / count);
-            Console.WriteLine("Average Duration of {0} runs (ms): {1}", count, (double) milliseconds / count);         
+            Console.WriteLine("Average Duration of {0} runs (ticks): {1}", count, watch.ElapsedTicks / count);
+            Console.WriteLine("Average Duration of {0} runs (ms): {1}", count, watch.ElapsedMilliseconds/ count);         
             Console.WriteLine();
 
         }
