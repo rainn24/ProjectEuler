@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Rud\Problem.cs" />
     <Compile Include="Rud\Problem4.cs" />
+    <Compile Include="Rud\Problem8.cs" />
     <Compile Include="Rud\Problem7.cs" />
     <Compile Include="Rud\Problem6.cs" />
     <Compile Include="Rud\Problem5.cs" />
@@ -61,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rud\Problem8.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

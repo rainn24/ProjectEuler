@@ -17,7 +17,9 @@ namespace ProjectEuler.Rud
         {
             watch = new Stopwatch();
             watch.Start();
+
             Solve();
+
             watch.Stop();
             WriteResults();
             Console.WriteLine();
@@ -31,14 +33,12 @@ namespace ProjectEuler.Rud
             
             watch = new Stopwatch();
 
-            long ticks = 0;
-            long milliseconds = 0;
-
             WriteDescription();
 
             watch.Start();
             for (int i = 0; i < count; i++)
             {
+
                 Solve();             
                 
                 Console.Write(".");
