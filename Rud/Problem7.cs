@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
+﻿
 namespace ProjectEuler.Rud
 {
     class Problem7 : Problem

@@ -25,7 +25,8 @@ namespace ProjectEuler.Rud
             Console.WriteLine();
             Console.WriteLine("Duration (ticks): " + watch.ElapsedTicks);
 
-            Console.WriteLine("Duration (ms): " + watch.ElapsedMilliseconds);            
+            Console.WriteLine("Duration (ms): " + watch.ElapsedMilliseconds);
+            Console.ReadKey();
         }
 
         public void Run(int count)
