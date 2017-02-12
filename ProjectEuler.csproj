@@ -59,6 +59,7 @@
     <Compile Include="Rud\Problem10.cs" />
     <Compile Include="Rud\Problem9.cs" />
     <Compile Include="Utils\Factor.cs" />
+    <Compile Include="Utils\PrimeGen.cs" />
     <Compile Include="Utils\Factors.cs" />
     <Compile Include="Utils\Primes.cs" />
   </ItemGroup>

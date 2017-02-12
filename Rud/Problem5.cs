@@ -14,40 +14,26 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
         protected override void Solve()
         {
+            int product = 1;
             List<int> factorList = new List<int>();
             for (int i = 2; i <= 20; i++)
             {
-                if (i == 8)
-                {
-                    var a = 1;
-                }
                 var factors = Utils.factors(i);
 
-                for (int j = 0; j < factors.Count; j++)
+                foreach (int factor in factors)
                 {
-                    int factor = factors[j];    //a factor of the number i
                     int factorCount = factors.Count(x => x == factor); //how many times this factor appears in the number i
 
                     //check how often this factor appears in the overall list of factors
                     //and compare it to how many times it appears in this number's factors
-                    int factorListCount = factorList.Count(x => x == factor);
-                    while (factorListCount < factorCount)
+                    while (factorList.Count(x => x == factor) < factorCount)
                     {
                         factorList.Add(factor);
-                        factorListCount++;
-                    }                                                            
+                        product *= factor;
+                    }
                 }
             }
-
-            int product = 1;
-
-            foreach (int factor in factorList)
-            {
-                product *= factor;
-            }
-            
             answer = product.ToString();
-
         }
     }
 }

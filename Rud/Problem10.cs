@@ -18,19 +18,11 @@ Find the sum of all the primes below two million.";
 
         protected override void Solve()
         {
-            int max = 2000000;
-            int sum = 0;
-            for (int i = 2; i < max; i++)
+            var primes = Utils.Sieve(2000000);
+            long sum = 0;
+            foreach (var prime in primes)
             {
-                if (Utils.factors(i).Count == 1)
-                {
-                    Console.WriteLine("{0} is Prime", i);
-                    sum += i;
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
+                sum += prime;
             }
             answer = sum.ToString();
         }

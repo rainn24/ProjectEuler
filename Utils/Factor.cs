@@ -21,6 +21,7 @@ namespace ProjectEuler
                     x /= i;
                 }
             }
+
             return factors;
         }
     }

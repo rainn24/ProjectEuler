@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectEuler
 {
@@ -7,6 +9,12 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            
+            Rud.Problem problem = new Rud.Problem5();
+            problem.Run();
+
+
+            /*
             Stopwatch watch = new Stopwatch();
             watch.Start();
             //int answer = Problem1J.Class1();
@@ -22,6 +30,7 @@ namespace ProjectEuler
             Console.WriteLine("Problem 1: " + answer);
             Console.WriteLine("Duration: " + watch.Elapsed);
             Console.ReadKey();
+            */
         }
     }
 }
