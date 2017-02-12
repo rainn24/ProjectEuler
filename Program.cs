@@ -15,7 +15,7 @@ namespace ProjectEuler
 
 
 
-            int answer = Problem5J.ProblemJ5();
+            int answer = Problem6J.ProblemJ6();
             
             Console.WriteLine("Problem 1: " + answer);
             Console.ReadKey();
