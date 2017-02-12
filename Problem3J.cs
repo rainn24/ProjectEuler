@@ -17,7 +17,7 @@ namespace ProjectEuler
         {
             long source = 600851475143;
             int print = 0;
-            var primeset = Utils.Primes(100000);
+            var primeset = Utils.Primes(10000);
             List<int> foundprimes = new List<int>();
 
             foreach (var element in primeset)
